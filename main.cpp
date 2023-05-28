@@ -1,6 +1,8 @@
 #include <iostream>
 
+#include "test/test_type_traits.h"
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    lhqvq_test::test_type_traits();
     return 0;
 }
