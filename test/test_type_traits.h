@@ -40,6 +40,24 @@ namespace lhqvq_test {
         static_assert(lhqvq::is_null_pointer_v<std::nullptr_t>);
         static_assert(lhqvq::is_null_pointer_v<std::nullptr_t const>);
         static_assert(lhqvq::is_null_pointer_v<std::nullptr_t volatile>);
+
+
+        // is_floating_point test
+        static_assert(not lhqvq::is_floating_point_v<int>);
+        static_assert(lhqvq::is_floating_point_v<float>);
+        static_assert(lhqvq::is_floating_point_v<double>);
+        static_assert(lhqvq::is_floating_point_v<long double>);
+        static_assert(lhqvq::is_floating_point_v<float const>);
+        static_assert(lhqvq::is_floating_point_v<float volatile>);
+
+
+        // is_integral test
+        static_assert(lhqvq::is_integral_v<int>);
+        static_assert(lhqvq::is_integral_v<unsigned int>);
+        static_assert(lhqvq::is_integral_v<char8_t>);
+        static_assert(lhqvq::is_integral_v<wchar_t>);
+        static_assert(lhqvq::is_integral_v<size_t>);
+        static_assert(not lhqvq::is_integral_v<int *>);
     }
 }
 
