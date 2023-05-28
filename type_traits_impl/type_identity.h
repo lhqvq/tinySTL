@@ -6,7 +6,13 @@
 #define TINYSTL_TYPE_IDENTITY_H
 
 namespace lhqvq {
+    template <typename T>
+    struct type_identity {
+        using type = T;
+    };
 
+    template <typename T>
+    using type_identity_t = typename type_identity<T>::type;
 }
 
 #endif //TINYSTL_TYPE_IDENTITY_H
