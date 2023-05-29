@@ -62,6 +62,11 @@ namespace lhqvq_test {
         // is_array test
         static_assert(lhqvq::is_array_v<int[5]>);
         static_assert(lhqvq::is_array_v<int[]>);
+
+        // is_pointer test
+        static_assert(lhqvq::is_pointer_v<int *>);
+        static_assert(lhqvq::is_pointer_v<const int *>);
+        static_assert(lhqvq::is_pointer_v<int * const>);
     }
 }
 
