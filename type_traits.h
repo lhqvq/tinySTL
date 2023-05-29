@@ -15,5 +15,6 @@
 #include "type_traits_impl/is_null_pointer.h"
 #include "type_traits_impl/is_floating_point.h"
 #include "type_traits_impl/is_integral.h"
+#include "type_traits_impl/is_array.h"
 
 #endif //TINYSTL_TYPE_TRAITS_H

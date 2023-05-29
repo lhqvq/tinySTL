@@ -58,6 +58,10 @@ namespace lhqvq_test {
         static_assert(lhqvq::is_integral_v<wchar_t>);
         static_assert(lhqvq::is_integral_v<size_t>);
         static_assert(not lhqvq::is_integral_v<int *>);
+
+        // is_array test
+        static_assert(lhqvq::is_array_v<int[5]>);
+        static_assert(lhqvq::is_array_v<int[]>);
     }
 }
 
