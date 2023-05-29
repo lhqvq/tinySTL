@@ -11,11 +11,27 @@
 #include "type_traits_impl/remove_cv.h"
 #include "type_traits_impl/is_same.h"
 
+// Primary type categories
 #include "type_traits_impl/is_void.h"
 #include "type_traits_impl/is_null_pointer.h"
-#include "type_traits_impl/is_floating_point.h"
 #include "type_traits_impl/is_integral.h"
+#include "type_traits_impl/is_floating_point.h"
 #include "type_traits_impl/is_array.h"
+#include "type_traits_impl/is_enum.h"
+#include "type_traits_impl/is_union.h"
+#include "type_traits_impl/is_class.h"
+#include "type_traits_impl/is_function.h"
 #include "type_traits_impl/is_pointer.h"
+#include "type_traits_impl/is_lvalue_reference.h"
+#include "type_traits_impl/is_rvalue_reference.h"
+#include "type_traits_impl/is_member_object_pointer.h"
+#include "type_traits_impl/is_member_function_pointer.h"
+
+// Composite type categories
+#include "type_traits_impl/is_reference.h"
+#include "type_traits_impl/is_member_pointer.h"
+
+// Type properties
+#include "type_traits_impl/is_const.h"
 
 #endif //TINYSTL_TYPE_TRAITS_H
