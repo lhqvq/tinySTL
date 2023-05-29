@@ -28,6 +28,11 @@
 #include "type_traits_impl/is_member_function_pointer.h"
 
 // Composite type categories
+#include "type_traits_impl/is_fundamental.h"
+#include "type_traits_impl/is_arithmetic.h"
+#include "type_traits_impl/is_scalar.h"
+#include "type_traits_impl/is_object.h"
+#include "type_traits_impl/is_compound.h"
 #include "type_traits_impl/is_reference.h"
 #include "type_traits_impl/is_member_pointer.h"
 
