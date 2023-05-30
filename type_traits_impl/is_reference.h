@@ -11,12 +11,12 @@
 
 namespace lhqvq {
     template <typename T>
-    struct is_reference : bool_constant<is_lvalue_reference_v<T>
-                                    ||  is_rvalue_reference_v<T>
-                                    > {};
+    struct is_reference : lhqvq::bool_constant< lhqvq::is_lvalue_reference_v<T>
+                                            ||  lhqvq::is_rvalue_reference_v<T>
+                                            > {};
 
     template <typename T>
-    inline constexpr bool is_reference_v = is_reference<T>::value;
+    inline constexpr bool is_reference_v = lhqvq::is_reference<T>::value;
 }
 
 #endif //TINYSTL_IS_REFERENCE_H

@@ -10,13 +10,13 @@
 
 namespace lhqvq {
     template <typename T>
-    struct is_floating_point : bool_constant<   is_same_raw_v<float,        T>
-                                             || is_same_raw_v<double,       T>
-                                             || is_same_raw_v<long double,  T>
-                                             > {};
+    struct is_floating_point : lhqvq::bool_constant<   lhqvq::is_same_raw_v<float,        T>
+                                                    || lhqvq::is_same_raw_v<double,       T>
+                                                    || lhqvq::is_same_raw_v<long double,  T>
+                                                    > {};
 
     template <typename T>
-    inline constexpr bool is_floating_point_v = is_floating_point<T>::value;
+    inline constexpr bool is_floating_point_v = lhqvq::is_floating_point<T>::value;
 
 }
 

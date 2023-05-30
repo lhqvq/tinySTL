@@ -14,14 +14,14 @@
 namespace lhqvq {
     // object = scalar + array + union + class
     template <typename T>
-    struct is_object : bool_constant<is_scalar_v<T>
-                                ||   is_array_v<T>
-                                ||   is_union_v<T>
-                                ||   is_class_v<T>
-                                > {};
+    struct is_object : lhqvq::bool_constant< lhqvq::is_scalar_v<T>
+                                        ||   lhqvq::is_array_v<T>
+                                        ||   lhqvq::is_union_v<T>
+                                        ||   lhqvq::is_class_v<T>
+                                        > {};
 
     template <typename T>
-    inline constexpr bool is_object_v = is_object<T>::value;
+    inline constexpr bool is_object_v = lhqvq::is_object<T>::value;
 }
 
 #endif //TINYSTL_IS_OBJECT_H

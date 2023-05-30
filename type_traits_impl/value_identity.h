@@ -12,7 +12,7 @@ namespace lhqvq {
     };
 
     template <auto X>
-    inline constexpr auto value_identity_v = value_identity<X>::value;
+    inline constexpr auto value_identity_v = lhqvq::value_identity<X>::value;
 }
 
 #endif //TINYSTL_VALUE_IDENTITY_H

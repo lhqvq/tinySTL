@@ -16,10 +16,10 @@ namespace lhqvq {
      * 4、子类中的第一个非静态成员的类型与其基类不同。
      */
     template <typename T>
-    struct is_standard_layout : bool_constant<__is_standard_layout(T)> {};
+    struct is_standard_layout : lhqvq::bool_constant<__is_standard_layout(T)> {};
 
     template <typename T>
-    inline constexpr bool is_standard_layout_v = is_standard_layout<T>::value;
+    inline constexpr bool is_standard_layout_v = lhqvq::is_standard_layout<T>::value;
 }
 
 #endif //TINYSTL_IS_STANDARD_LAYOUT_H

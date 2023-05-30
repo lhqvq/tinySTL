@@ -9,10 +9,10 @@
 
 namespace lhqvq {
     template <typename T>
-    struct is_void : is_same_raw<void, T> {};
+    struct is_void : lhqvq::is_same_raw<void, T> {};
 
     template <typename T>
-    inline constexpr bool is_void_v = is_void<T>::value;
+    inline constexpr bool is_void_v = lhqvq::is_void<T>::value;
 }
 
 #endif //TINYSTL_IS_VOID_H

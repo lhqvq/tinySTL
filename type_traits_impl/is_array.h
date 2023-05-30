@@ -11,16 +11,16 @@
 
 namespace lhqvq {
     template <typename T>
-    struct is_array : false_type {};
+    struct is_array : lhqvq::false_type {};
 
     template <typename T, std::size_t N>
-    struct is_array<T[N]> : true_type {};
+    struct is_array<T[N]> : lhqvq::true_type {};
 
     template <typename T>
-    struct is_array<T[]> : true_type {};
+    struct is_array<T[]> : lhqvq::true_type {};
 
     template <typename T>
-    inline constexpr bool is_array_v = is_array<T>::value;
+    inline constexpr bool is_array_v = lhqvq::is_array<T>::value;
 }
 
 #endif //TINYSTL_IS_ARRAY_H

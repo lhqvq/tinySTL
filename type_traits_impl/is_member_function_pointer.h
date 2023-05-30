@@ -12,18 +12,18 @@
 namespace lhqvq {
     namespace detail {
         template <typename T>
-        struct is_member_function_pointer_helper : false_type {};
+        struct is_member_function_pointer_helper : lhqvq::false_type {};
 
         // 成员函数继承自 is_function
         template <typename T, typename U>
-        struct is_member_function_pointer_helper<T U::*> : is_function<T> {};
+        struct is_member_function_pointer_helper<T U::*> : lhqvq::is_function<T> {};
     }
 
     template <typename T>
-    struct is_member_function_pointer : detail::is_member_function_pointer_helper<remove_cv_t<T>> {};
+    struct is_member_function_pointer : lhqvq::detail::is_member_function_pointer_helper<lhqvq::remove_cv_t<T>> {};
 
     template <typename T>
-    inline constexpr bool is_member_function_pointer_v = is_member_function_pointer<T>::value;
+    inline constexpr bool is_member_function_pointer_v = lhqvq::is_member_function_pointer<T>::value;
 }
 
 #endif //TINYSTL_IS_MEMBER_FUNCTION_POINTER_H

@@ -9,13 +9,13 @@
 
 namespace lhqvq {
     template <typename T>
-    struct is_volatile : false_type {};
+    struct is_volatile : lhqvq::false_type {};
 
     template <typename T>
-    struct is_volatile<T volatile> : true_type {};
+    struct is_volatile<T volatile> : lhqvq::true_type {};
 
     template <typename T>
-    inline constexpr bool is_volatile_v = is_volatile<T>::value;
+    inline constexpr bool is_volatile_v = lhqvq::is_volatile<T>::value;
 }
 
 #endif //TINYSTL_IS_VOLATILE_H

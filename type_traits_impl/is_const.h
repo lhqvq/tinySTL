@@ -9,13 +9,13 @@
 
 namespace lhqvq {
     template <typename T>
-    struct is_const : false_type {};
+    struct is_const : lhqvq::false_type {};
 
     template <typename T>
-    struct is_const<T const> : true_type {};
+    struct is_const<T const> : lhqvq::true_type {};
 
     template <typename T>
-    inline constexpr bool is_const_v = is_const<T>::value;
+    inline constexpr bool is_const_v = lhqvq::is_const<T>::value;
 }
 
 #endif //TINYSTL_IS_CONST_H

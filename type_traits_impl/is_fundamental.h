@@ -16,13 +16,13 @@
 namespace lhqvq {
     // fundamental = arithmetic + void + nullptr_t = integral + floating_point + void + nullptr_t
     template <typename T>
-    struct is_fundamental : bool_constant<is_arithmetic_v<T>
-                                    ||    is_void_v<T>
-                                    ||    is_same_raw_v<std::nullptr_t, T>
-                                    > {};
+    struct is_fundamental : lhqvq::bool_constant< lhqvq::is_arithmetic_v<T>
+                                            ||    lhqvq::is_void_v<T>
+                                            ||    lhqvq::is_same_raw_v<std::nullptr_t, T>
+                                            > {};
 
     template <typename T>
-    inline constexpr bool is_fundamental_v = is_fundamental<T>::value;
+    inline constexpr bool is_fundamental_v = lhqvq::is_fundamental<T>::value;
 }
 
 #endif //TINYSTL_IS_FUNDAMENTAL_H

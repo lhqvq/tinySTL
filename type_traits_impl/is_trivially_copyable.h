@@ -16,10 +16,10 @@ namespace lhqvq {
      */
     // 需依赖编译器实现
     template <typename T>
-    struct is_trivially_copyable : bool_constant<__is_trivially_copyable(T)> {};
+    struct is_trivially_copyable : lhqvq::bool_constant<__is_trivially_copyable(T)> {};
 
     template <typename T>
-    inline constexpr bool is_trivially_copyable_v = is_trivially_copyable<T>::value;
+    inline constexpr bool is_trivially_copyable_v = lhqvq::is_trivially_copyable<T>::value;
 }
 
 #endif //TINYSTL_IS_TRIVIALLY_COPYABLE_H

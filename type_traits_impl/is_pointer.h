@@ -11,17 +11,17 @@
 namespace lhqvq {
     namespace detail {
         template <typename T>
-        struct is_pointer_helper : false_type {};
+        struct is_pointer_helper : lhqvq::false_type {};
 
         template <typename T>
-        struct is_pointer_helper<T *> : true_type {};
+        struct is_pointer_helper<T *> : lhqvq::true_type {};
     }
 
     template <typename T>
-    using is_pointer = detail::is_pointer_helper<remove_cv_t<T>>;
+    using is_pointer = lhqvq::detail::is_pointer_helper<lhqvq::remove_cv_t<T>>;
 
     template <typename T>
-    inline constexpr bool is_pointer_v = is_pointer<T>::value;
+    inline constexpr bool is_pointer_v = lhqvq::is_pointer<T>::value;
 }
 
 #endif //TINYSTL_IS_POINTER_H

@@ -11,13 +11,13 @@ namespace lhqvq {
     // ------------------------------------------------------
     // -------------------- remove_const --------------------
     template <typename T>
-    struct remove_const : type_identity<T> {};
+    struct remove_const : lhqvq::type_identity<T> {};
 
     template <typename T>
-    struct remove_const<T const> : type_identity<T> {};
+    struct remove_const<T const> : lhqvq::type_identity<T> {};
 
     template <typename T>
-    using remove_const_t = typename remove_const<T>::type;
+    using remove_const_t = typename lhqvq::remove_const<T>::type;
     // -------------------- remove_const --------------------
     // ------------------------------------------------------
 
@@ -27,13 +27,13 @@ namespace lhqvq {
     // ---------------------------------------------------------
     // -------------------- remove_volatile --------------------
     template <typename T>
-    struct remove_volatile : type_identity<T> {};
+    struct remove_volatile : lhqvq::type_identity<T> {};
 
     template <typename T>
-    struct remove_volatile<T volatile> : type_identity<T> {};
+    struct remove_volatile<T volatile> : lhqvq::type_identity<T> {};
 
     template <typename T>
-    using remove_volatile_t = typename remove_volatile<T>::type;
+    using remove_volatile_t = typename lhqvq::remove_volatile<T>::type;
     // -------------------- remove_volatile --------------------
     // ---------------------------------------------------------
 
@@ -43,10 +43,10 @@ namespace lhqvq {
     // ---------------------------------------------------
     // -------------------- remove_cv --------------------
     template <typename T>
-    using remove_cv = remove_const<remove_volatile_t<T>>;
+    using remove_cv = lhqvq::remove_const<lhqvq::remove_volatile_t<T>>;
 
     template <typename T>
-    using remove_cv_t = typename remove_cv<T>::type;
+    using remove_cv_t = typename lhqvq::remove_cv<T>::type;
     // -------------------- remove_cv --------------------
     // ---------------------------------------------------
 }

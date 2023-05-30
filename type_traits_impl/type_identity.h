@@ -12,7 +12,7 @@ namespace lhqvq {
     };
 
     template <typename T>
-    using type_identity_t = typename type_identity<T>::type;
+    using type_identity_t = typename lhqvq::type_identity<T>::type;
 }
 
 #endif //TINYSTL_TYPE_IDENTITY_H

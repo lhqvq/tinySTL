@@ -10,10 +10,10 @@
 namespace lhqvq {
     // 需依赖编译器实现
     template <typename T>
-    struct is_enum : bool_constant<__is_enum(T)> {};
+    struct is_enum : lhqvq::bool_constant<__is_enum(T)> {};
 
     template <typename T>
-    inline constexpr bool is_enum_v = is_enum<T>::value;
+    inline constexpr bool is_enum_v = lhqvq::is_enum<T>::value;
 }
 
 #endif //TINYSTL_IS_ENUM_H

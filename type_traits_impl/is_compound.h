@@ -11,10 +11,10 @@
 namespace lhqvq {
     // 复合类型 = 非基本类型
     template <typename T>
-    struct is_compound : bool_constant<!is_fundamental_v<T>> {};
+    struct is_compound : lhqvq::bool_constant<!lhqvq::is_fundamental_v<T>> {};
 
     template <typename T>
-    inline constexpr bool is_compound_v = is_compound<T>::value;
+    inline constexpr bool is_compound_v = lhqvq::is_compound<T>::value;
 }
 
 #endif //TINYSTL_IS_COMPOUND_H

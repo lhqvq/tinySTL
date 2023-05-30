@@ -11,10 +11,10 @@
 
 namespace lhqvq {
     template <typename T>
-    struct is_null_pointer : is_same_raw<std::nullptr_t, T> {};
+    struct is_null_pointer : lhqvq::is_same_raw<std::nullptr_t, T> {};
 
     template <typename T>
-    inline constexpr bool is_null_pointer_v = is_null_pointer<T>::value;
+    inline constexpr bool is_null_pointer_v = lhqvq::is_null_pointer<T>::value;
 }
 
 #endif //TINYSTL_IS_NULL_POINTER_H

@@ -25,10 +25,10 @@ namespace lhqvq {
     };
 
     template <bool B>
-    using bool_constant = integral_constant<bool, B>;
+    using bool_constant = lhqvq::integral_constant<bool, B>;
 
-    using true_type = bool_constant<true>;
-    using false_type = bool_constant<false>;
+    using true_type = lhqvq::bool_constant<true>;
+    using false_type = lhqvq::bool_constant<false>;
 }
 
 #endif //TINYSTL_INTEGRAL_CONSTANT_H

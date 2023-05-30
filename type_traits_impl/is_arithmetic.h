@@ -12,12 +12,12 @@
 namespace lhqvq {
     // arithmetic = integral + floating_point
     template <typename T>
-    struct is_arithmetic : bool_constant<is_integral_v<T>
-                                    ||   is_floating_point_v<T>
-                                    > {};
+    struct is_arithmetic : lhqvq::bool_constant<lhqvq::is_integral_v<T>
+                                            ||  lhqvq::is_floating_point_v<T>
+                                            > {};
 
     template <typename T>
-    inline constexpr bool is_arithmetic_v = is_arithmetic<T>::value;
+    inline constexpr bool is_arithmetic_v = lhqvq::is_arithmetic<T>::value;
 }
 
 #endif //TINYSTL_IS_ARITHMETIC_H

@@ -12,12 +12,12 @@
 namespace lhqvq {
     // 非成员函数无 cv 限定
     template <typename T>
-    struct is_function : bool_constant<!is_const_v<T const>
-                                    && !is_reference_v<T>
-                                    > {};
+    struct is_function : lhqvq::bool_constant< !lhqvq::is_const_v<T const>
+                                            && !lhqvq::is_reference_v<T>
+                                            > {};
 
     template <typename T>
-    inline constexpr bool is_function_v = is_function<T>::value;
+    inline constexpr bool is_function_v = lhqvq::is_function<T>::value;
 }
 
 #endif //TINYSTL_IS_FUNCTION_H
