@@ -38,5 +38,13 @@
 
 // Type properties
 #include "type_traits_impl/is_const.h"
+#include "type_traits_impl/is_volatile.h"
+#include "type_traits_impl/is_trivial.h"
+#include "type_traits_impl/is_trivially_copyable.h"
+#include "type_traits_impl/is_standard_layout.h"
+#include "type_traits_impl/is_pod.h"
+
+
+
 
 #endif //TINYSTL_TYPE_TRAITS_H
