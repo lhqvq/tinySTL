@@ -10,7 +10,7 @@
 #include "is_reference.h"
 
 namespace lhqvq {
-    // 非成员函数无 cv 限定
+    // 非成员函数无法 cv 限定
     template <typename T>
     struct is_function : lhqvq::bool_constant< !lhqvq::is_const_v<T const>
                                             && !lhqvq::is_reference_v<T>
